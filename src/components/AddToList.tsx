@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { InferencePriority } from 'typescript';
 import { IState as Props } from '../App';
 
 interface IProps {
@@ -7,7 +8,7 @@ interface IProps {
     setPeople: React.Dispatch<React.SetStateAction<Props["people"]>>
 }
 
-const AddToList: React.FC<IProps> = () => {
+const AddToList: React.FC<IProps> = ({people, setPeople}) => {
 
     const [input, setInput] = useState({
         name: "",
@@ -24,7 +25,23 @@ const AddToList: React.FC<IProps> = () => {
     }
 
     const handleClick = ():void => {
+        if(
+            !input.name ||
+            !input.age ||
+            !input.img 
+        ) {
+            return;
+        }
 
+        setPeople([
+            ...people,
+            {
+                name: input.name,
+                age: parseInt(input.age),
+                url: input.img,
+                note: input.note
+            }
+        ]);
     }
 
     return(
