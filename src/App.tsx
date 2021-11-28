@@ -1,16 +1,22 @@
-import React from 'react';
-import {Button} from 'antd';
+import React, { useState } from 'react';
 import './App.css';
 
+interface IState {
+  people: {
+    name: string,
+    age: number,
+    url: string,
+    note?: string
+  } []
+}
+
 function App() {
+
+  const [people, setPeople] = useState<IState['people']>([])
+
   return (
     <div className="App">
-      <Button type="primary">Primary Button</Button>
-      <Button>Default Button</Button>
-      <Button type="dashed">Dashed Button</Button>
-      <br />
-      <Button type="text">Text Button</Button>
-      <Button type="link">Link Button</Button>
+      <h1>Hogwarts' Students</h1>
     </div>
   );
 }
