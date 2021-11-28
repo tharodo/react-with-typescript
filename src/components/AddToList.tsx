@@ -10,13 +10,16 @@ const AddToList = () => {
         note: ""
     });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>):void => {
         setInput({
             ...input,
             [e.target.name]: e.target.value
         })
     }
 
+    const handleClick = ():void => {
+        
+    }
 
     return(
         <div className="AddToList">
