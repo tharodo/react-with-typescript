@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { IState as Props } from '../App';
 
 const AddToList = () => {
 
@@ -18,7 +19,7 @@ const AddToList = () => {
     }
 
     const handleClick = ():void => {
-        
+
     }
 
     return(
