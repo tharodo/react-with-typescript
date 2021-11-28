@@ -10,6 +10,10 @@ const AddToList = () => {
         note: ""
     });
 
+    const handleChange = () => {
+
+    }
+
     return(
         <div className="AddToList">
             <input 
@@ -17,23 +21,31 @@ const AddToList = () => {
                 placeholder="Name"
                 className="AddToList-input"
                 value={input.name}
+                onChange={handleChange}
+                name="name"
             />
             <input 
                 type="text" 
                 placeholder="Age"
                 className="AddToList-input"
                 value={input.age}
+                onChange={handleChange}
+                name="age"
             />
             <input 
                 type="text" 
                 placeholder="Image Url"
                 className="AddToList-input"
                 value={input.img}
+                onChange={handleChange}
+                name="img"
             />
             <textarea 
                 placeholder="Note"
                 className="AddToList-input"
                 value={input.note}
+                onChange={handleChange}
+                name="note"
             />
         </div>
     )
