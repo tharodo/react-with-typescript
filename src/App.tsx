@@ -27,7 +27,7 @@ function App() {
     <div className="App">
       <h1>Hogwarts' Students</h1>
       <List people={people} />
-      <AddToList/>
+      <AddToList people={people} setPeople={setPeople} />
     </div>
   );
 }
